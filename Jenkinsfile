@@ -20,6 +20,13 @@ pipeline {
             }
         }
         
+        stage ( "Get Approval for Deploy EKS clsuter" ) {
+            steps {
+                input " Please approve to proceed clster Deployment " 
+            }
+            
+        }
+        
        stage('Terraform Apply'){
             steps{
                 withCredentials([[
