@@ -20,9 +20,9 @@ pipeline {
             }
         }
         
-        stage ( "Get Approval for Deploy EKS clsuter" ) {
+        stage ( "Get Approval " ) {
             steps {
-                input " Please approve to proceed clster Deployment " 
+                input " Please approve to proceed EKS clster Deployment process" 
             }
             
         }
