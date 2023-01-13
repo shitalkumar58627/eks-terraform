@@ -21,6 +21,10 @@ pipeline {
         }
         
         stage ( "Get Approval " ) {
+            options {
+                timeout (time: 1, UNIT: 'MINUTES')
+            }
+            
             steps {
                 input " Please approve to proceed EKS clster Deployment process" 
             }
