@@ -22,7 +22,7 @@ pipeline {
         
         stage ( "Get Approval " ) {
             options {
-                timeout (time: 1, UNIT: 'MINUTES')
+                timeout (time: 1, unit: 'MINUTES')
             }
             
             steps {
