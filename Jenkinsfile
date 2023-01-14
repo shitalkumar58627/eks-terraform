@@ -31,14 +31,15 @@ pipeline {
             
         }
         
-       stage('Terraform Apply'){
+       stage('terraform Action'){
             steps{
                 withCredentials([[
                     $class: 'AmazonWebServicesCredentialsBinding',
                     credentialsId: "ilab-aws",
                     accessKeyVariable: 'AWS_ACCESS_KEY_ID',
                     secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-                sh 'terraform apply --auto-approve'
+                    echo "Terraform action is --> ${action}"
+                 sh ('terraform ${action} --auto-approve') 
                 }
             }
         }
