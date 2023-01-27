@@ -44,10 +44,4 @@ resource "aws_iam_role_policy_attachment" "AmazonEC2ContainerRegistryReadOnly-EK
 }
 
 
-resource "aws_ecr_repository" "my-ecr-repo" {
-  name = "my-ecr-repo"
-}
 
-output "my-ecr-repo" {
-  value = aws_ecr_repository.example.name
-}
