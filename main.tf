@@ -48,6 +48,6 @@ resource "aws_ecr_repository" "my-ecr-repo" {
   name = "my-ecr-repo"
 }
 
-output "ecr_name" {
+output "my-ecr-repo" {
   value = aws_ecr_repository.example.name
 }
