@@ -42,3 +42,12 @@ resource "aws_iam_role_policy_attachment" "AmazonEC2ContainerRegistryReadOnly-EK
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
   role       = aws_iam_role.eks-iam-role.name
 }
+
+
+resource "aws_ecr_repository" "my-ecr-repo" {
+  name = "my-ecr-repo"
+}
+
+output "ecr_name" {
+  value = aws_ecr_repository.example.name
+}
